@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-light: rgb(238, 238, 238);
+    --bg-white: #fff;
+    --primary-color: rgb(96, 69, 252);
+    --primary-blue: rgb(57, 170, 252);
+    --grey-text: rgba(73, 71, 71, 0.981);
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    user-select: none;
+    background-color: var(--bg-light);
+    color: var(--grey-text)
+}
+
+.btn{
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--bg-white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+a {
+    color: var(--grey-text);
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* Nav bar */
+.nav-bar {
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--bg-white)
+}
+
+.nav-bar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.nav-bar .logo img {
+    width: 2rem;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.nav-bar .logo h3 span {
+    color: var(--primary-color);
+}
+
+.nav-bar .logo h3 {
+    color: var(--primary-blue);
+    cursor: pointer;
+}
+
+.profile-photo {
+    font-size: 0.8r8em;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icons i {
+    font-size: 1.2rem;
+    background-color: var(--bg-light);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Main */
+main {
+    display: grid;
+    width: 95%;
+    gap: 5rem;
+    grid-template-columns: 5rem auto;
+}
+
+main aside {
+    height: 90vh;
+    background-color: var(--bg-white);
+    color: var(--grey-text);
+
+}
+
+main aside .icon-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0;
+
+}
+
+.icon-container a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    transition: all 300ms ease-in-out;
+}
+
+.icon-container a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+.products {
+    margin: 2rem 0 1rem;
+}
+
+.products h2 {
+    margin-bottom: 1rem;
+}
+
+.table {
+    width: 100%;
+    background-color: var(--bg-white);
+    border-radius: 0.7rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.products table {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5rem;
+
+}
+
+table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+table tbody tr:last-child td{
+    border: none;
+}
+
+.table .btn{
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.page-count {
+    width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.page-count a {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+}
+
+.active {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+
+}
+
+.available{
+    color: rgb(3, 157, 3);
+}
+
+.finished{
+    color: rgb(202, 33, 33);
+}
+
+/* Pop up */
+
+.popup{
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.088);
+    animation: zoom 300ms ease;
+    visibility: hidden;
+}
+
+.form-heading{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-white);
+    width: 50%;
+    padding: 2rem;
+    border-radius: 0.7rem;
+}
+
+.form-element{
+    margin: 2rem 0;
+}
+
+form input{
+    margin: 0.5rem 0;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--bg-light);
+    border-radius: 0.4rem;
+}
+
+.radio div{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.radio input{
+    width: 1rem;
+    margin-right: 1rem;
+}
+
+.form-element .btn{
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.submit-btn{
+    width: 10rem;
+    margin: 0 auto;
+}
+
+#close{
+    cursor: pointer;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+    }
+
+    50%{
+        transform: scale(2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
